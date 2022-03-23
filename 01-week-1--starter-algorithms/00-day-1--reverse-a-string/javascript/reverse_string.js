@@ -1,5 +1,8 @@
 function reverseString(str) {
-  // type your code here
+  const splitStr = str.split().reverse().toString();
+
+  return splitStr;
+
 }
 
 if (require.main === module) {
@@ -15,5 +18,8 @@ if (require.main === module) {
 
 module.exports = reverseString;
 
-// Please add your pseudocode to this file
+// function takes in a string as an argument
+  //will turn each character into an array
+  //then put the last index into a new arrary
+  //then turn that array into a string
 // And a written explanation of your solution
