@@ -1,8 +1,14 @@
 function reverseString(str) {
-  const splitStr = str.split().reverse().toString();
+  const stringArray = [];
 
-  return splitStr;
+  for(let i = 0; i <str.length; i++) {
+    const letter = str.charAt(i);
+    stringArray.unshift(letter);
+  }
 
+  const reversedString = stringArray.join('')
+
+  return reversedString;
 }
 
 if (require.main === module) {
@@ -20,6 +26,6 @@ module.exports = reverseString;
 
 // function takes in a string as an argument
   //will turn each character into an array
-  //then put the last index into a new arrary
-  //then turn that array into a string
+  //then as it iterates through each character, it puts the next character in front in the new array
+  //then join that array into a string again
 // And a written explanation of your solution
