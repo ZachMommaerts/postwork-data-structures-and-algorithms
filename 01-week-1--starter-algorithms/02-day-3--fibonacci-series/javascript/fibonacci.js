@@ -1,5 +1,21 @@
 function fibonacci(num) {
-  // type your code here
+  let numA = 0;
+  let numB = 1;
+  let result;
+
+  if(numA === num) {
+    return numA;
+  } else if (numB == num) {
+    return numB;
+  } else {
+    for ( let i = 0; i < (num-1); i++) {
+      result = numA + numB;
+      numA = numB;
+      numB = result;
+    }
+}
+
+  return result;
 }
 
 if (require.main === module) {
@@ -21,4 +37,9 @@ if (require.main === module) {
 module.exports = fibonacci;
 
 // Please add your pseudocode to this file
+  //create variables for number A and number B
+  //create a for loop that will run for as many times as the input
+  //Add numA and numB
+  //then reassign numB as numA
+  //then reassign new value as numB
 // And a written explanation of your solution
