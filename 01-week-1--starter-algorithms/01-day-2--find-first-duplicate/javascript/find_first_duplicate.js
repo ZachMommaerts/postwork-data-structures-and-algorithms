@@ -1,17 +1,29 @@
 function findFirstDuplicate(arr) {
-  let previousNumber;
+  const duplicateArray = [];
 
-  for( let i = 0; i < arr.length; i++ ) {
-    if ( arr[i] === previousNumber) {
-      return arr[i];
-    } else {
-      previousNumber = arr[i];
+  for ( let i = 0; i < arr.length; i++){
+
+    if ( duplicateArray.find( number => number === arr[i] )) {
+      return arr[i]
     }
+
+    duplicateArray.unshift(arr[i])
   }
 
   return -1;
-
 }
+
+// let previousNumber;
+
+//   for( let i = 0; i < arr.length; i++ ) {
+//     if ( arr[i] === previousNumber) {
+//       return arr[i];
+//     } else {
+//       previousNumber = arr[i];
+//     }
+//   }
+
+//   return -1;
 
 if (require.main === module) {
   // add your own tests in here
@@ -27,8 +39,8 @@ if (require.main === module) {
 module.exports = findFirstDuplicate;
 
 // Loop that iterates through an array
-  // has a variable that starts at 0 and will change to the iterated character.
+  // has an empty array that is filled 
   // will go through each character and compare it to the previous
   //
 // And a written explanation of your solution
-  //Created a variable for the previous number and then iterated over the array and if the number was already in there then 
+// an empty array is created that will get elements crammed into it in a loop as long as the new array does not find the element within it.
