@@ -1,5 +1,15 @@
 function selectionSort(arr) {
-  // type your code here
+  const sortedArray = [];
+
+  for (let i = 0; i < arr.length; i ++) {
+    for ( let j = 0; j < sortedArray.length; j ++) {
+      if (arr[i] >)
+    }
+
+    sortedArray.unshift(arr[i])
+  }
+
+  return sortedArray;
 }
 
 if (require.main === module) {
