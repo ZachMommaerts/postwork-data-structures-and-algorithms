@@ -1,12 +1,11 @@
 function selectionSort(arr) {
+  let lowestNumber;
   const sortedArray = [];
 
-  for (let i = 0; i < arr.length; i ++) {
-    for ( let j = 0; j < sortedArray.length; j ++) {
-      if (arr[i] >)
-    }
-
-    sortedArray.unshift(arr[i])
+  for(let i = 0; i < arr.length; i++) {
+    lowestNumber = Math.min(...arr);
+    sortedArray.push(lowestNumber);
+    arr.filter(number => number === lowestNumber);
   }
 
   return sortedArray;
